@@ -1,0 +1,2 @@
+in this part we code only the hooks but this is not possible with only html and css
+I'll leave this here when it's needed because we have to create te architecture of the project

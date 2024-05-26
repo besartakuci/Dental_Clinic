@@ -1,0 +1,2 @@
+in this part we code only the components but this is not possibl with only html and css
+I'll leave this here when it's needed because we have to create te architecture of the project
