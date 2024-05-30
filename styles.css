@@ -184,6 +184,9 @@ header {
     background-color: var(--soblue);
     text-align: center;
 }
+.quote img{
+    width: 40%;
+}
 .quotetxt{
     font-size: 40px;
     color: var(--backgroundc);
@@ -467,7 +470,7 @@ footer {
         width: 100%;
     }
     .about img {
-        width: 80%;
+        width: 40%;
     }
     .about,
     .services ,
@@ -479,10 +482,10 @@ footer {
         text-align: center;
     }
     .quote img{
-        width: 100%;
+        width: 50%;
     }
     .quotetxt{
-        width: 100%;
+        width: 50%;
         margin: 0;
     }
     .footer_container{
@@ -495,7 +498,7 @@ footer {
         width: 100%;
     }
     .about img {
-        width: 80%;
+        width: 40%;
     }
     .about,
     .services ,
@@ -507,10 +510,10 @@ footer {
         text-align: center;
     }
     .quote img{
-        width: 100%;
+        width: 50%;
     }
     .quotetxt{
-        width: 100%;
+        width: 50%;
         margin: 0;
     }
     .footer_container{
@@ -523,7 +526,7 @@ footer {
         width: 100%;
     }
     .about img {
-        width: 80%;
+        width: 40%;
     }
     .about,
     .services ,
@@ -535,10 +538,10 @@ footer {
         text-align: center;
     }
     .quote img{
-        width: 100%;
+        width: 50%;
     }
     .quotetxt{
-        width: 100%;
+        width: 50%;
         margin: 0;
     }
     .footer_container{
