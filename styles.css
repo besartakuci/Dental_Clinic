@@ -1,9 +1,17 @@
-:root{
-    --darkblue: #3D4EAF;
-    --grey: #777777;
-    --backgroundc: #F5F6FB;
+:root {
+    --darkblue: #3D4EAF; /*primary color*/
+    --grey: #777777; /*secondary + text color*/
+    --backgroundc: #F5F6FB; /*backgroundcolor*/
     --soblue: #00ABC4;
+    --font-size-large: 33px;
+    --font-size-medium: 20px;
+    --font-size-small: 16px;
+    --transition-duration: 0.3s;
 }
+h1, h2, h3 {
+    color: var(--darkblue);
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -25,6 +33,13 @@ body, h1, h2, h3, p, ul {
 }
 
 /* Container Styling */
+
+header {
+    background-color: var(--backgroundc);
+    color: black;
+    padding: 20px;
+}
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -32,63 +47,45 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    position: relative;
-    z-index: 1;
-
 }
 
-/* Header Styling */
-header {
-    background-color: white;
-    color: black;
-    padding: 20px;
-}
-/* Logo Styling */
-header h1 a {
+header a {
     color: black;
     text-decoration: none;
-    font-size: 24px;
 }
 
-/* Navigation Styling */
-nav ul {
+header nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
 }
 
-nav ul li {
+header nav ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: black;
     text-decoration: none;
     font-size: 20px;
 }
-
-nav ul li a:hover {
+header nav ul li a:hover {
     color: var(--darkblue);
-    border-bottom: 1px solid var(--darkblue) ;
+    border-bottom: 1px solid var(--darkblue);
 }
-
-/* Search Bar Styling */
-.search {
-    display: flex;
-    align-items: center;
-}
-
-.searchinput {
+.searchinput{
     padding: 10px;
-    border: none;
+    border: 1px solid var(--darkblue);
     border-radius: 4px;
-    margin-right: 10px;
+}
+.search{
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* Ensure the z-index of the header is above other content*/
-header {
-    z-index: 1000;
-}
 
 .img-appointment{
     display: flex;
@@ -96,8 +93,11 @@ header {
     background-color: var(--darkblue);
     margin: 0;
     padding: 30px;
-    color: white;
     font-size: 20px;
+}
+.first h3,
+.second h3{
+    color: white;
 }
 .img-appointment button, .explore{
     color: white;
@@ -140,72 +140,6 @@ header {
     justify-content: space-between;
     padding: 20px;
 }
-.mainservices{
-    padding: 15px;
-    font-size: 25px;
-}
-.specialservices{
-    padding: 20px;
-    margin: 50px;
-}
-.special{
-    display: flex;
-}
-.specialservices p{
-    color: var(--grey);
-}
-.specialservices h2{
-    color: var(--darkblue);
-}
-.team{
-    padding-top: 40px;
-    font-size: 20px;
-}
-.team h2{
-    color: var(--darkblue);
-    text-align: center;
-}
-.team h1{
-    text-align: center;
-    font-size: 30px;
-    color: var(--grey);
-}
-.team p{
-    text-align: center;
-    color: var(--grey);
-}
-.teamimg{
-    padding: 30px;
-    display: flex;
-    justify-content: space-around;
-}
-.quote{
-    display: flex;
-    background-color: var(--soblue);
-    text-align: center;
-}
-.quote img{
-    width: 40%;
-}
-.quotetxt{
-    font-size: 40px;
-    color: var(--backgroundc);
-    padding: 20px;
-    margin-top: 140px;
-}
-.content p {
-    color: var(--grey);
-}
-.container_services {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-}
-
-.container_services img {
-    width: 100%;
-    display: block;
-}
 
 .overlay {
     position: absolute;
@@ -240,8 +174,109 @@ header {
     font-size: 16px;
 }
 
+.mainservices{
+    padding: 15px;
+    font-size: 25px;
+}
+.specialservices{
+    padding: 20px;
+    margin: 50px;
+}
+.special{
+    display: flex;
+}
+.specialservices p{
+    color: var(--grey);
+}
+.specialservices h2{
+    color: var(--darkblue);
+}
+.team{
+    padding-top: 40px;
+    font-size: 20px;
+}
+.teamimg{
+    display: flex;
+    justify-content: space-around;
+}
+.teamimg a:hover,
+.teamimg img{
+    border-radius: 77px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  39px 39px 93px #cecece,
+             -39px -39px 93px #f2f2f2;
+}
+.team h2{
+    color: var(--darkblue);
+    text-align: center;
+}
+.team h1{
+    text-align: center;
+    font-size: 30px;
+    color: var(--grey);
+}
+.team p{
+    text-align: center;
+    color: var(--grey);
+}
+.teamimg{
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.team a {
+    text-decoration: none;
+}
+.quote{
+    display: flex;
+    background-color: var(--soblue);
+    text-align: center;
+}
+.quote img{
+    width: 40%;
+}
+.quotetxt{
+    font-size: 40px;
+    color: var(--backgroundc);
+    padding: 20px;
+    margin-top: 140px;
+}
+.content p {
+    color: black;
+}
+.container_services {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container_services img {
+    width: 100%;
+    display: block;
+}
+
+.container_services:hover .overlay {
+    opacity: 1 !important;
+}
+
+.overlay .content {
+    text-align: center;
+}
+
+.overlay .content h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: black !important
+}
+
+.overlay .content p {
+    margin: 0;
+    font-size: 16px;
+}
+
 .container img{
-    width: 400px;
+    width: 100%;
     height: auto;
 }
 .about {
@@ -287,6 +322,7 @@ header {
     color: var(--backgroundc);
     background-color: var(--darkblue);
 }
+
 footer {
     background: #333;
     color: #fff;

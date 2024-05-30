@@ -96,9 +96,21 @@ header nav ul li a:hover {
     max-width: 1300px;
     margin: 0 auto;
 }
+
 .team{
     padding-top: 40px;
     font-size: 20px;
+}
+.teamimg{
+    display: flex;
+    justify-content: space-around;
+}
+.teamimg a:hover,
+.teamimg img{
+    border-radius: 77px !important;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  39px 39px 93px #cecece,
+             -39px -39px 93px #f2f2f2;
 }
 .team h2{
     color: var(--darkblue);
@@ -114,9 +126,13 @@ header nav ul li a:hover {
     color: var(--grey);
 }
 .teamimg{
-    padding: 30px;
+    padding: 40px;
     display: flex;
     justify-content: space-around;
+    gap: 10px;
+}
+.team a {
+    text-decoration: none;
 }
 .appointment {
     padding: 60px 20px;
