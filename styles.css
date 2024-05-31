@@ -34,56 +34,56 @@ body, h1, h2, h3, p, ul {
 
 /* Container Styling */
 header{
-    background-color: var(--backgroundc) !important; /*svyn niher*/
-  }
+    background-color: var(--backgroundc) !important;   
+}
   
-  li{
+li{
     list-style: none;
-  }
+}
   
-  a{
+a{
     color: var(--grey);
     text-decoration: none;
-  }
+}
   
-  .container{
+.container{
     max-width: 1224px;
     width: 92%;
     margin: 0 auto;
-  }
+}
   
-  .navbar{
+.navbar{
     min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  .nav-branding{
+.nav-branding{
     font-size: 2rem;
-  }
+}
   
-  .nav-menu{
+.nav-menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
-  }
+}
   
-  .nav-link{
+.nav-link{
     transition: 0.3s ease-out;
-  }
+}
   
-  .nav-link:hover{
+.nav-link:hover{
     color: var(--darkblue);
-  }
+}
   
-  .hamburger{
+.hamburger{
     display: none;
     cursor: pointer;
-  }
+}
   
-  .bar{
+.bar{
     display: block;
     width: 25px;
     height: 3px;
@@ -91,9 +91,7 @@ header{
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background-color: white;
-  }
-
-/* Ensure the z-index of the header is above other content*/
+}
 
 .img-appointment{
     display: flex;
@@ -140,9 +138,23 @@ header{
     color: white;
     text-align: center;
     padding: 200px 20px;
-    height: 600px;
+    animation: fadeIn 3s ease-in-out forwards;
+    display: block;
+    margin: 0 auto; /* Center the image */
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 .services{
     display: flex;
     justify-content: space-between;

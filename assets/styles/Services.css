@@ -19,56 +19,56 @@ body {
 }
 
 header{
-    background-color: var(--backgroundc) !important; /*svyn niher*/
-  }
+    background-color: var(--backgroundc) !important;   
+}
   
-  li{
+li{
     list-style: none;
-  }
+}
   
-  a{
+a{
     color: var(--grey);
     text-decoration: none;
-  }
+}
   
-  .container{
+.container{
     max-width: 1224px;
     width: 92%;
     margin: 0 auto;
-  }
+}
   
-  .navbar{
+.navbar{
     min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  .nav-branding{
+.nav-branding{
     font-size: 2rem;
-  }
+}
   
-  .nav-menu{
+.nav-menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
-  }
+}
   
-  .nav-link{
+.nav-link{
     transition: 0.3s ease-out;
-  }
+}
   
-  .nav-link:hover{
+.nav-link:hover{
     color: var(--darkblue);
-  }
+}
   
-  .hamburger{
+.hamburger{
     display: none;
     cursor: pointer;
-  }
+}
   
-  .bar{
+.bar{
     display: block;
     width: 25px;
     height: 3px;
@@ -76,7 +76,7 @@ header{
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background-color: white;
-  }
+}
 .container_services {
     position: relative;
     width: 100%;
