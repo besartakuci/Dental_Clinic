@@ -177,7 +177,7 @@ header nav ul li a:hover {
 }
 .appointment button:hover{
     color: var(--backgroundc);
-    background-color: var(--darkblue);
+    background-color: var(--darkblue) !important;
 }
 footer{
     background-color: #333 !important;
