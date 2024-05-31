@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dentist Services Details</title>
-    <link rel="stylesheet" href="./styles/Product.css">
+    <link rel="stylesheet" href="../assets/styles/Product.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-           <h1><a href="index.html">Porto</a></h1>
-           <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="AboutUs.html">About</a></li>
-                <li><a href="ContactUs.html">Contact</a></li>
-            </ul>
-           </nav>
-           <div class="search">
-               <input type="text" placeholder="Search" class="searchinput"> 
-               <img src="../assets/search.png" alt="" style="width: 35px; height: auto; margin-bottom: 0;">
-           </div>
-        </div>
-       </header>
-    
+        <div class="container"> 
+            <nav class="navbar">
+                <a href="../index.html" class="nav-branding"><img src="../assets/images/logo.png" alt="" style="width: 50%; height: auto;"></a>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./AboutUs.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./ContactUs.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./Services.html" class="nav-link">Services</a>
+                  </li>
+              </ul>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+         </div>
+    </header>
     <!-- Main Content -->
     <main>
         <section class="service-details">
@@ -35,18 +43,18 @@
                     tortor luctus vulputate. Cras laoreet pretium blandit. Vestibulum luctus laoreet lacinia. 
                     Maecenas luctus arcu ut orci lacinia ultrices. Praesent semper porta interdum. Etiam cursus,
                     tortor at interdum rutrum, metus nibh tincidunt purus, non tincidunt odio arcu quis erat.</p>
-                <img src="../assets/service-1.jpg" alt="Service Image">
+                <img src="../assets/images/service-1.jpg" alt="Service Image">
                 <h3>Service Details</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
         </section>
-    </main>
-    
+    </main>   
     <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Porto Dentist. All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="../script.js"></script>
 </body>
 </html>

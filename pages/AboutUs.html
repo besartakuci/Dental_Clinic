@@ -4,33 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="styles/AboutUs.css">
+    <link rel="stylesheet" href="../assets/styles/AboutUs.css">
 </head>
 <body>
-     <!-- Header -->
-     <header>
-        <div class="container">
-           <h1><a href="index.html">Porto</a></h1>
-           <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="AboutUs.html">About</a></li>
-                <li><a href="ContactUs.html">Contact</a></li>
-            </ul>
-           </nav>
-           <div class="search">
-               <input type="text" placeholder="Search" class="searchinput"> 
-               <img src="../assets/search.png" alt="" style="width: 35px; height: auto; margin-bottom: 0;">
-           </div>
-        </div>
-       </header>
-       <section class="about">
-        <img src="https://dentistry.co.uk/app/uploads/2020/01/hygienists-e1578655129518.jpg" alt="">
+    
+    <!-- Header -->
+    <header>
+        <div class="container"> 
+            <nav class="navbar">
+                <a href="../index.html" class="nav-branding"><img src="../assets/images/logo.png" alt="" style="width: 50%; height: auto;"></a>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./AboutUs.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./ContactUs.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./Services.html" class="nav-link">Services</a>
+                  </li>
+              </ul>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+         </div>
+    </header>
+    <section class="about">
+        <img src="https://dentistry.co.uk/app/uploads/2020/01/hygienists-e1578655129518.jpg" alt="about image">
         <div class="description">
             <h2>About Us</h2>
-            <p><span class="welcome_txt"><b>Welcome to Porto Dentist Downtown Los Angeles. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></span> <br> <br>
+            <p><b>Welcome to Porto Dentist Downtown Los Angeles. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b><br> <br>
                 Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo, 
                 vel efficitur felis ultrices non. Cras a elit sit amet leo acun volutpat. 
                 Suspendisse hendrerit vehicula leo, vel efficitur fel.</p> <br><br>
@@ -47,7 +57,7 @@
         <div class="teamimg">
             <a href="">
                 <div class="team_container">
-                    <img src="../assets/team-1.jpg" alt="">
+                    <img src="../assets/images/team-1.jpg" alt="">
                     <div class="team_overlay">
                         <div class="team_content">
                             <h2>John Doe</h2>
@@ -58,7 +68,7 @@
             </a>
             <a href="">
                 <div class="team_container">
-                    <img src="../assets/team-2.jpg" alt="">
+                    <img src="../assets/images/team-2.jpg" alt="">
                     <div class="team_overlay">
                         <div class="team_content">
                             <h2>Sara Smith</h2>
@@ -69,7 +79,7 @@
             </a>
             <a href="">
                 <div class="team_container">
-                    <img src="../assets/team-3.jpg" alt="">
+                    <img src="../assets/images/team-3.jpg" alt="">
                     <div class="team_overlay">
                         <div class="team_content">
                             <h2>Peter Philips</h2>
@@ -83,11 +93,11 @@
     <!--Contact/Appointment-->
     <section class="appointment">
         <h2>Book Appointment</h2>
-        <form>
+        <form id="appointment-form">
             <label for="name">First name</label>
-            <input type="text" id="name" name="name" required placeholder="Jonh">
+            <input type="text" id="name" name="name" required placeholder="John">
             <label for="lastname">Last name</label>
-            <input type="text" id="lastname" name="name" required placeholder="Doe">
+            <input type="text" id="lastname" name="lastname" required placeholder="Doe">
             <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" required placeholder="011 111 111">
             <label for="email">Email</label>
@@ -147,6 +157,30 @@
             </div>
         </div>
     </footer>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const form = document.getElementById('appointment-form');
+
+            form.addEventListener('submit', function(event) {
+                // Prevent the form from submitting the traditional way
+                event.preventDefault();
+
+                // Retrieve the input values
+                const name = document.getElementById('name').value;
+                const lastname = document.getElementById('lastname').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Log the values to the console
+                console.log(`Name: ${name}`);
+                console.log(`Last name: ${lastname}`);
+                console.log(`Phone: ${phone}`);
+                console.log(`Email: ${email}`);
+                console.log(`Message: ${message}`);
+            });
+        });
+    </script>
+    <script src="../script.js"></script>
 </body>
 </html>

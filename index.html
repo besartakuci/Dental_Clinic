@@ -9,22 +9,30 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-           <h1><a href="index.html" style="font-size: 33px;">Porto</a></h1>
-           <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./pages/Services.html">Services</a></li>
-                <li><a href="./pages/AboutUs.html">About</a></li>
-                <li><a href="./pages/ContactUs.html">Contact</a></li>
-            </ul>
-           </nav>
-           <div class="search">
-               <input type="text" placeholder="Search" class="searchinput"> 
-               <img src="../assets/search.png" alt="Search Icon" style="width: 35px; height: auto; margin-bottom: 0;">
-           </div>
-           <img src="./assets/menu.png" alt="" style="width: 30px; height: auto;">
-        </div>
+        <div class="container" id="home"> 
+            <nav class="navbar">
+                <a href="#" class="nav-branding"><img src="./assets/images/logo.png" alt="" style="width: 50%; height: auto;"></a>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./pages/AboutUs.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./pages/ContactUs.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./pages/Services.html" class="nav-link">Services</a>
+                  </li>
+              </ul>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+         </div>
     </header>
     <!-- Main Section -->
     <main>
@@ -40,8 +48,8 @@
             <img src="https://dentistry.co.uk/app/uploads/2020/01/hygienists-e1578655129518.jpg" alt="">
             <div class="description">
                 <h2>About Us</h2>
-                <p><span class="welcome_txt"><b>Welcome to Porto Dentist Downtown Los Angeles. 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></span> <br> <br>
+                <p><b>Welcome to Porto Dentist Downtown Los Angeles. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b><br> <br>
                     Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo, 
                     vel efficitur felis ultrices non. Cras a elit sit amet leo acun volutpat. 
                     Suspendisse hendrerit vehicula leo, vel efficitur fel.</p>
@@ -51,7 +59,7 @@
         <h1 style="text-align: center; padding: 20px;" >Our Services</h1>
         <section class="services" style="color: #777777;">
             <a href="./pages/Product.html"><div class="container_services">
-                <img src="./assets/service-1.jpg" alt="">
+                <img src="./assets/images/service-1.jpg" alt="">
                 <div class="overlay">
                     <div class="content">
                         <h2>Dental Exams</h2>
@@ -59,7 +67,7 @@
                 </div>
             </div></a>
             <div class="container_services">
-                <img src="./assets/service-2.jpg" alt="">
+                <img src="./assets/images/service-2.jpg" alt="">
                 <div class="overlay">
                     <div class="content">
                         <h2>Dental Cleaning</h2>
@@ -67,7 +75,7 @@
                 </div>
             </div>
             <div class="container_services">
-                <img src="./assets/service-3.jpg" alt="">
+                <img src="./assets/images/service-3.jpg" alt="">
                 <div class="overlay">
                     <div class="content">
                         <h2>Root Canal</h2>
@@ -75,7 +83,7 @@
                 </div>
             </div>
             <div class="container_services">
-                <img src="./assets/service-4.jpg" alt="">
+                <img src="./assets/images/service-4.jpg" alt="">
                 <div class="overlay">
                     <div class="content">
                         <h2>Oral Surgery</h2>
@@ -97,9 +105,9 @@
                         Suspendisse hendrerit vehicula leo, vel efficitur fel.</p>
                 </div>
                 <div class="mainservices"> <br> <br>
-                    <p> <img src="./assets/yes.png" alt="yes"> Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo.</p> <br>
-                    <p> <img src="./assets/yes.png" alt="yes"> Elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo.</p> <br>
-                    <p> <img src="./assets/yes.png" alt="yes"> Ras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo.</p> <br>
+                    <p> <img src="./assets/images/yes.png" alt="yes"> Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo.</p> <br>
+                    <p> <img src="./assets/images/yes.png" alt="yes"> Elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo.</p> <br>
+                    <p> <img src="./assets/images/yes.png" alt="yes"> Ras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo.</p> <br>
                 </div>
             </div>
         </section>
@@ -116,7 +124,7 @@
             <div class="teamimg">
                 <a href="">
                     <div class="team_container">
-                        <img src="./assets/team-1.jpg" alt="">
+                        <img src="./assets/images/team-1.jpg" alt="">
                         <div class="team_overlay">
                             <div class="team_content">
                                 <h2>John Doe</h2>
@@ -127,7 +135,7 @@
                 </a>
                 <a href="">
                     <div class="team_container">
-                        <img src="./assets/team-2.jpg" alt="">
+                        <img src="./assets/images/team-2.jpg" alt="">
                         <div class="team_overlay">
                             <div class="team_content">
                                 <h2>Sara Smith</h2>
@@ -138,7 +146,7 @@
                 </a>
                 <a href="">
                     <div class="team_container">
-                        <img src="./assets/team-3.jpg" alt="">
+                        <img src="./assets/images/team-3.jpg" alt="">
                         <div class="team_overlay">
                             <div class="team_content">
                                 <h2>Peter Philips</h2>
@@ -150,7 +158,7 @@
             </div>
         </section>
         <section class="quote">
-            <img src="./assets/quote.jpg" alt="">
+            <img src="./assets/images/quote.jpg" alt="">
             <div class="quotetxt">
                 <p>"Maintain a bright smile and healthy gums with consistent brushing, 
                     flossing, and regular dental check-ups."</p>
@@ -158,11 +166,11 @@
         </section>
         <section class="appointment">
             <h2>Book Appointment</h2>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Jonh">
+            <form id="appointment-form">
+                <label for="name">First name</label>
+                <input type="text" id="name" name="name" required placeholder="John">
                 <label for="lastname">Last name</label>
-                <input type="text" id="lastname" name="name" required placeholder="Doe">
+                <input type="text" id="lastname" name="lastname" required placeholder="Doe">
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone" required placeholder="011 111 111">
                 <label for="email">Email</label>
@@ -173,9 +181,8 @@
             </form>
         </section>
     </main>
-
     <!-- Footer -->
-<footer>
+    <footer>
     <div class="footer-top">
         <div class="footer_container">
             <div class="footer-info">
@@ -223,7 +230,31 @@
             Designed by <a href="https://www.okler.net/">Okler</a>
         </div>
     </div>
-</footer>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const form = document.getElementById('appointment-form');
 
+            form.addEventListener('submit', function(event) {
+                // Prevent the form from submitting the traditional way
+                event.preventDefault();
+
+                // Retrieve the input values
+                const name = document.getElementById('name').value;
+                const lastname = document.getElementById('lastname').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Log the values to the console
+                console.log(`Name: ${name}`);
+                console.log(`Last name: ${lastname}`);
+                console.log(`Phone: ${phone}`);
+                console.log(`Email: ${email}`);
+                console.log(`Message: ${message}`);
+            });
+        });
+    </script>
+    <script src="./script.js"></script>
 </body>
 </html>

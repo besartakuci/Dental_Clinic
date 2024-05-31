@@ -4,36 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="styles/ContactUs.css">
+    <link rel="stylesheet" href="../assets/styles/ContactUs.css">
 </head>
 <body>
-     <!-- Header -->
-     <header>
-        <div class="container">
-           <h1><a href="index.html">Porto</a></h1>
-           <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="AboutUs.html">About</a></li>
-                <li><a href="ContactUs.html">Contact</a></li>
-            </ul>
-           </nav>
-           <div class="search">
-               <input type="text" placeholder="Search" class="searchinput"> 
-               <img src="../assets/search.png" alt="" style="width: 35px; height: auto; margin-bottom: 0;">
-           </div>
-        </div>
-       </header>
+    <!-- Header -->
+    <header>
+        <div class="container"> 
+            <nav class="navbar">
+                <a href="../index.html" class="nav-branding"><img src="../assets/images/logo.png" alt="" style="width: 50%; height: auto;"></a>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./AboutUs.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./ContactUs.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./Services.html" class="nav-link">Services</a>
+                  </li>
+              </ul>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+         </div>
+    </header>
     <!--Contact-->
     <section class="contact">
         <div class="maindetails">
-            <p><img src="../assets/location.png" alt="location" style="margin-bottom: 0px;"> 99 Porto St, Los Angeles, CA 10000</p>
-            <p><img src="../assets/email.png" alt="email" style="margin-bottom: 0px;"> email@domain.com</p>
+            <p><img src="../assets/images/location.png" alt="location" style="margin-bottom: 0px;"> 99 Porto St, Los Angeles, CA 10000</p>
+            <p><img src="../assets/images/email.png" alt="email" style="margin-bottom: 0px;"> email@domain.com</p>
         </div>
         <div>
-            <p><img src="../assets/clock.png" alt="clock"> Mon - Sat 9:00am - 6:00pm / Sunday - CLOSED</p>
-            <p><img src="../assets/phone.png" alt="phone"> 044 444 444</p>
+            <p><img src="../assets/images/clock.png" alt="clock"> Mon - Sat 9:00am - 6:00pm / Sunday - CLOSED</p>
+            <p><img src="../assets/images/phone.png" alt="phone"> 044 444 444</p>
         </div>
     </section>
     <section class="img-appointment" >
@@ -43,11 +52,11 @@
     <!--Appointment-->
     <section class="appointment">
         <h2>Book Appointment</h2>
-        <form>
+        <form id="appointment-form">
             <label for="name">First name</label>
-            <input type="text" id="name" name="name" required placeholder="Jonh">
+            <input type="text" id="name" name="name" required placeholder="John">
             <label for="lastname">Last name</label>
-            <input type="text" id="lastname" name="name" required placeholder="Doe">
+            <input type="text" id="lastname" name="lastname" required placeholder="Doe">
             <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" required placeholder="011 111 111">
             <label for="email">Email</label>
@@ -107,6 +116,30 @@
             </div>
         </div>
     </footer>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const form = document.getElementById('appointment-form');
+
+            form.addEventListener('submit', function(event) {
+                // Prevent the form from submitting the traditional way
+                event.preventDefault();
+
+                // Retrieve the input values
+                const name = document.getElementById('name').value;
+                const lastname = document.getElementById('lastname').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Log the values to the console
+                console.log(`Name: ${name}`);
+                console.log(`Last name: ${lastname}`);
+                console.log(`Phone: ${phone}`);
+                console.log(`Email: ${email}`);
+                console.log(`Message: ${message}`);
+            });
+        });
+    </script>
+    <script src="../script.js"></script>
 </body>
 </html>
