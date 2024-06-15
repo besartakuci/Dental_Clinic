@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porto Dentist</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -12,32 +24,27 @@
         <div class="container" id="home"> 
             <nav class="navbar">
                 <a href="#" class="nav-branding"><img src="./assets/images/logo.png" alt="" style="width: 50%; height: auto;"></a>
-              <ul class="nav-menu">
-                <li class="nav-item">
-                  <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./pages/AboutUs.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./pages/ContactUs.html" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./pages/Services.html" class="nav-link">Services</a>
-                  </li>
-              </ul>
-              <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./pages/AboutUs.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="./pages/ContactUs.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="./pages/Services.html" class="nav-link">Services</a></li>
+                    <button id="theme-toggle" class="add_data">Toggle Theme</button>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
          </div>
+         
     </header>
     <!-- Main Section -->
     <main>
         <section class="hero">
-            <h2>Affordable Full-Service Dental Care in LA</h2>
+            <img src="https://www.shutterstock.com/image-photo/young-woman-stomatology-clinic-dental-600nw-1754789561.jpg" alt="">
+            <h2 id="welcome-message">Affordable Full-Service Dental Care in LA</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </section>
         <section class="img-appointment first">
@@ -58,24 +65,26 @@
         </section>
         <h1 style="text-align: center; padding: 20px;" >Our Services</h1>
         <section class="services" style="color: #777777;">
-            <a href="./pages/Product.html"><div class="container_services">
-                <img src="./assets/images/service-1.jpg" alt="">
-                <div class="overlay">
-                    <div class="content">
-                        <h2>Dental Exams</h2>
-                    </div>
+            <a href="./pages/Product.html">
+                <div class="container_services">
+                    <img src="./assets/images/service-1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="content">
+                            <h2>Dental Exams</h2>
+                            </div>
+                        </div>
                 </div>
-            </div></a>
+            </a>
             <div class="container_services">
-                <img src="./assets/images/service-2.jpg" alt="">
-                <div class="overlay">
-                    <div class="content">
-                        <h2>Dental Cleaning</h2>
-                    </div>
+            <img src="./assets/images/service-2.jpg" alt="">
+            <div class="overlay">
+                <div class="content">
+                    <h2>Dental Cleaning</h2>
                 </div>
             </div>
+            </div>
             <div class="container_services">
-                <img src="./assets/images/service-3.jpg" alt="">
+            <img src="./assets/images/service-3.jpg" alt="">
                 <div class="overlay">
                     <div class="content">
                         <h2>Root Canal</h2>
@@ -91,6 +100,9 @@
                 </div>
             </div>
         </section>
+        <div class="leadmore">
+            <button id="load-more" class="add_data">Load More</button>
+        </div>
         <section class="img-appointment second" >
             <h3>Book Appointment Online - Need Immediate Confirmation? Call Us at 888-123-4567</h3>
             <button>Book Appointment</button>
@@ -115,6 +127,7 @@
             <h3>Book Appointment Online - Need Immediate Confirmation? Call Us at 888-123-4567</h3>
             <button>Book Appointment</button>
         </section>
+        <!--Static data for team members-->
         <section class="team">
             <h2>Porto Dentists</h2>
             <h1>Meet Our Dentists</h1>
@@ -157,6 +170,17 @@
                 </a>
             </div>
         </section>
+        <!--Dynamic data for tem members-->
+        <section class="team">
+            <h2>Porto Dentists</h2>
+            <h1>Meet Our Dentists</h1>
+            <p>Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo, vel efficitur
+                felis ultrices non. Cras a elit sit amet leo acun volutpat. Suspendisse hendrerit vehicula leo, 
+                vel efficitur fel.</p>
+            <div class="teamimg" id="team-members">
+                <!-- Team members will be dynamically loaded here -->
+            </div>
+        </section>
         <section class="quote">
             <img src="./assets/images/quote.jpg" alt="">
             <div class="quotetxt">
@@ -178,6 +202,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required placeholder="I want to ...."></textarea>
                 <button type="submit">Submit</button>
+                <p id="form-message" class="success" style="display:none;">Form submitted successfully!</p>
             </form>
         </section>
     </main>
@@ -231,30 +256,11 @@
         </div>
     </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const form = document.getElementById('appointment-form');
-
-            form.addEventListener('submit', function(event) {
-                // Prevent the form from submitting the traditional way
-                event.preventDefault();
-
-                // Retrieve the input values
-                const name = document.getElementById('name').value;
-                const lastname = document.getElementById('lastname').value;
-                const phone = document.getElementById('phone').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-
-                // Log the values to the console
-                console.log(`Name: ${name}`);
-                console.log(`Last name: ${lastname}`);
-                console.log(`Phone: ${phone}`);
-                console.log(`Email: ${email}`);
-                console.log(`Message: ${message}`);
-            });
-        });
-    </script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" style="display: none;">&#8679; Back to Top</button>
     <script src="./script.js"></script>
+    <script>
+       
+    </script>
 </body>
 </html>

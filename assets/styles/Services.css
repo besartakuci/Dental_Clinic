@@ -21,11 +21,18 @@ body {
 header{
     background-color: var(--backgroundc) !important;   
 }
-  
 li{
     list-style: none;
 }
-  
+.add_data{
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    color: var(--backgroundc) !important;
+    background-color: var(--darkblue) !important;
+    border: none;
+    border-radius: 5px;
+}    
 a{
     color: var(--grey);
     text-decoration: none;

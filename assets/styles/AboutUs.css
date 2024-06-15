@@ -22,7 +22,20 @@ body {
 header{
     background-color: var(--backgroundc) !important;   
 }
-  
+.add_data{
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    color: var(--backgroundc) !important;
+    background-color: var(--darkblue) !important;
+    border: none;
+    border-radius: 5px;
+}  
+.leadmore{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 li{
     list-style: none;
 }
